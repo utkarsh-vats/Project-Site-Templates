@@ -1,0 +1,52 @@
+:root {
+  --font_0: normal normal bold 80px/1.4em poppins-semibold,poppins,sans-serif;
+  --font_1: normal normal normal 16px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
+  --font_2: normal normal bold 58px/1.4em poppins-extralight,poppins,sans-serif;
+  --font_3: normal normal normal 50px/1.4em poppins-extralight,poppins,sans-serif;
+  --font_4: normal normal normal 31px/1.4em poppins-extralight,poppins,sans-serif;
+  --font_5: normal normal normal 30px/1.4em poppins-semibold,poppins,sans-serif;
+  --font_6: normal normal bold 16px/1.4em poppins-extralight,poppins,sans-serif;
+  --font_7: normal normal normal 22px/1.4em poppins-semibold,poppins,sans-serif;
+  --font_8: normal normal normal 15px/1.4em georgia,palatino,'book antiqua','palatino linotype',serif;
+  --font_9: normal normal normal 12px/1.4em georgia,palatino,'book antiqua','palatino linotype',serif;
+  --font_10: normal normal normal 12px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 900px;
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: yellow;
+  box-shadow: 0 -100vh 0 100vh yellow, 0 0 15px 5px black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(236, 236, 171);
+}

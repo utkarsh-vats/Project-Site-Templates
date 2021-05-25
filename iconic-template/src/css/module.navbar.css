@@ -1,0 +1,22 @@
+.navbar-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    /* border-bottom: 1px solid grey; */
+    background: rgb(240, 240, 240);
+}
+
+.logo {
+    text-decoration: none;   
+}
+
+.links {
+    display: flex;
+}
+
+.links a{
+    text-decoration: none;
+    color: inherit;
+    padding: 0 0.5rem;
+}

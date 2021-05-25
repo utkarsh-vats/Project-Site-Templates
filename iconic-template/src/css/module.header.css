@@ -1,0 +1,41 @@
+.header {
+    background: rgb(240, 240, 240);
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10vh;
+}
+
+.header .quote {
+    margin: auto;
+    padding: 1rem;
+    width: 35rem;
+    font-size: 1.7rem;
+    /* text-align: center; */
+}
+
+.header .quote h1 {
+    font-weight: 400;
+}
+
+.header .quote .italic {
+    font-style: italic;
+    font-weight: 100;
+}
+
+.header .quote .bold {
+    font-weight: 700;
+}
+
+.header .quote .highlight {
+    background: #ffff00;
+}
+
+.header-img {
+    width: 40vw;
+    height: 100%;
+    background-image: url(../images/image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

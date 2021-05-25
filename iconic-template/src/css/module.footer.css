@@ -1,0 +1,64 @@
+.footer {
+    background: rgb(20, 20, 20);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.subscribe-form {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-1 {
+    color: rgb(240, 240, 240);
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+    margin: 1rem;
+}
+
+.text-2 {
+    color: rgb(240, 240, 240);
+    font-size: 0.8rem;
+}
+
+.form {
+    width: 100%;
+}
+
+.footer .highlight {
+    color: yellow;
+}
+
+.form .label {
+    color: rgb(240, 240, 240);
+    margin: 0 0 5px 0;
+}
+
+.form input {
+    width: 100%;
+    margin: 0 0 5px 0;
+    outline: none;
+    background: transparent;
+    border: 1px solid rgb(240, 240, 240);
+    font-size: 1.2rem;
+    line-height: 2rem;
+    padding: 0 25px;
+}
+
+.form button {
+    width: 100%;
+    background: yellow;
+    color: black;
+    outline: none;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    font-weight: 100;
+    font-style: italic;
+}
