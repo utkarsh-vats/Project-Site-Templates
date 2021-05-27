@@ -1,7 +1,65 @@
 import React, { Component } from "react";
 import "../css/module.header.css";
 
+const twoPI = Math.PI * 2;
+const width = 700;
+const height = 700;
+
 export default class Header extends Component {
+    componentDidMount() {
+        this.showClock();
+        setInterval(this.showClock, 1000);
+    }
+    showClock = () => {
+        let canvas = this.refs.canvas;
+        let context = canvas.getContext('2d');
+        let handLength = width / 2;
+        let date = new Date();
+        let sec = date.getSeconds();
+
+        context.clearRect(0, 0, width, height);
+
+        // clock marks
+        for(let i = 0; i < 12; i++) {
+            let angle = (i - 3) * (twoPI) / 12;
+            context.lineWidth = 2;
+            
+            context.beginPath();
+            let x1 = (width / 2) + Math.cos(angle) * (handLength);
+            let y1 = (height / 2) + Math.sin(angle) * (handLength);
+            let x2 = (width / 2) + Math.cos(angle) * (handLength - handLength / 7);
+            let y2 = (height / 2) + Math.sin(angle) * (handLength - handLength / 7);
+        
+            context.moveTo(x1, y1);
+            context.lineTo(x2, y2);
+            console.log(`x1: ${x1}\ny1: ${y1}\nx2: ${x2}\ny2: ${y2}\n`)
+            context.strokeStyle = "#fff";
+            context.stroke();
+        }
+
+        // minute hand
+        let minuteAngle = twoPI / 3;
+        context.lineWidth = 2;
+        context.beginPath();
+        context.moveTo(width / 2, height / 2);
+        context.lineTo(
+            (width / 2 - Math.cos(minuteAngle) * (handLength - (handLength / 2))), 
+            (height / 2 - Math.sin(minuteAngle) * (handLength - (handLength / 2)))
+        );
+        context.stroke();
+
+        // second hand
+        let secondAngle = (twoPI * 5 * (sec / 60));
+        context.lineWidth = 2;
+        context.beginPath();
+        context.moveTo(width / 2, height / 2);
+        context.lineTo(
+            (width / 2 - Math.cos(secondAngle) * (handLength - (handLength / 4))), 
+            (height / 2 - Math.sin(secondAngle) * (handLength - (handLength / 4)))
+        );
+        context.stroke();
+
+    }
     render() {
         return(
             <div className="header">
@@ -11,7 +69,7 @@ export default class Header extends Component {
                     <div className="text-1">stay tuned!</div>
                 </div>
                 <div className="scroll-down"><i className="arrow down"></i></div>
-                <div className="canvas" id="canvas"></div>
+                <canvas ref="canvas" className="canvas" width={width} height={height}></canvas>
             </div>
         );
     }

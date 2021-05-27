@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import "../css/module.navbar.css";
 
+require('dotenv').config();
+
+const lnURL = "https://www.google.com/";
+const gitURL = "https://github.com/utkarsh-vats";
+const instaURL = "https://www.instagram.com/utkarsh_vats2000/";
+
 export default class Navbar extends Component {
     render() {
         return(
@@ -14,9 +20,9 @@ export default class Navbar extends Component {
                     <p className="link">Subscribe</p>
                 </div>
                 <div className="socials">
-                    <a href={process.env.FACEBOOK_URL}><i class="fab fa-facebook-f"></i></a>
-                    <a href={process.env.FACEBOOK_URL}><i class="fab fa-twitter"></i></a>
-                    <a href={process.env.FACEBOOK_URL}><i class="fab fa-instagram"></i></a>
+                    <a href={lnURL}><i class="fab fa-linkedin-in"></i></a>
+                    <a href={gitURL}><i class="fab fa-github"></i></a>
+                    <a href={instaURL}><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         );
