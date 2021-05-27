@@ -1,0 +1,77 @@
+.header {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 10rem;
+}
+
+.header .heading {
+    width: 600px;
+    text-align: center;
+}
+
+.header .heading .text-1 {
+    font-weight: 100;
+    font-size: 1.5rem;
+    margin: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.header .heading .text-2 {
+    font-weight: 500;
+    font-size: 6rem;
+    margin: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+}
+
+.header .scroll-down {
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid white;
+    position: absolute;
+    bottom: 2rem;
+    color: white;
+    transition: all 0.3s ease;
+    margin: auto;
+    text-align: center;
+}
+
+.header .scroll-down:hover {
+    cursor: pointer;
+    background: rgb(255, 255, 255, 0.8);
+    color: rgb(14, 46, 71);
+    border-color: rgb(14, 46, 71);
+}
+
+.header .scroll-down:active {
+    background: transparent;
+    border: 1px solid white;
+}  
+
+.scroll-down .arrow {
+    position: relative;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 0.5rem;
+    top: 0.75rem;
+}
+
+.scroll-down .arrow:hover {
+    border: solid rgb(14, 46, 71);
+    border-width: 0 1px 1px 0;
+}
+
+.scroll-down .arrow:active {
+    border-width: 0 2px 2px 0;
+    border-color: white;
+}  
+
+.scroll-down .down {
+    transform: rotate(45deg);
+}

@@ -1,0 +1,67 @@
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.footer .text-1 {
+    font-size: 1rem;
+    font-weight: 100;
+    margin: 0 1rem;
+    text-align: right;
+    width: calc(50% - 2.5rem);
+}
+
+.footer .text-2 {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 100;
+    margin: 0 1rem;
+    width: calc(50% - 2.5rem);
+}
+
+.footer .scroll-up {
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid rgb(14, 46, 71);
+    background: rgb(14, 46, 71);
+}
+
+.footer .scroll-up:hover {
+    cursor: pointer;
+    background: rgb(255, 255, 255, 0.8);
+    color: rgb(14, 46, 71);
+    border-color: rgb(14, 46, 71);
+}
+
+.footer .scroll-up:active {
+    background: rgb(14, 46, 71);
+    border: 1px solid rgb(14, 46, 71);
+} 
+
+.scroll-up .arrow {
+    position: relative;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 0.5rem;
+    top: 1rem;
+    left: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.scroll-up .arrow:hover {
+    border: solid rgb(14, 46, 71);
+    border-width: 0 2px 2px 0;
+}
+
+.scroll-up .arrow:active {
+    border-width: 0 2px 2px 0;
+    border-color: rgb(14, 46, 71);
+}  
+
+.scroll-up .up {
+    transform: rotate(-135deg);
+}
