@@ -1,17 +1,22 @@
 import React, { Component } from "react";
 import "../css/module.header.css";
+import { scrollDown } from "./scroll";
 
 const twoPI = Math.PI * 2;
 const width = 700;
 const height = 700;
 
 export default class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.canvasRef = React.createRef();
+    }
     componentDidMount() {
         this.showClock();
         setInterval(this.showClock, 1000);
     }
     showClock = () => {
-        let canvas = this.refs.canvas;
+        let canvas = this.canvasRef.current;
         let context = canvas.getContext('2d');
         let handLength = width / 2;
         let date = new Date();
@@ -32,7 +37,6 @@ export default class Header extends Component {
         
             context.moveTo(x1, y1);
             context.lineTo(x2, y2);
-            console.log(`x1: ${x1}\ny1: ${y1}\nx2: ${x2}\ny2: ${y2}\n`)
             context.strokeStyle = "#fff";
             context.stroke();
         }
@@ -62,14 +66,14 @@ export default class Header extends Component {
     }
     render() {
         return(
-            <div className="header">
+            <div className="header" id="header">
                 <div className="heading">
                     <div className="text-1">our new site is</div>
                     <div className="text-2">coming soon</div>
                     <div className="text-1">stay tuned!</div>
                 </div>
-                <div className="scroll-down"><i className="arrow down"></i></div>
-                <canvas ref="canvas" className="canvas" width={width} height={height}></canvas>
+                <div className="scroll-down" onClick={scrollDown}><i className="arrow down"></i></div>
+                <canvas ref={this.canvasRef} className="canvas" width={width} height={height}></canvas>
             </div>
         );
     }

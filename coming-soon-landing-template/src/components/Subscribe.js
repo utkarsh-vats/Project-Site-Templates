@@ -4,7 +4,7 @@ import "../css/module.subscribe.css";
 export default class Subscribe extends Component {
     render() {
         return(
-            <div className="wrap">
+            <div className="wrap" id="subscribe-form">
                 <div className="about">
                     <h1 className="title">About Us</h1>
                     <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab eius dolore eum qui error delectus quidem id beatae nisi dicta ullam aperiam commodi deleniti non, necessitatibus animi magni ducimus porro. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur modi porro atque totam architecto ratione.</p>
