@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import "../css/module.navbar.css";
 import { scrollDown, scrollUp } from "./scroll";
 
-require('dotenv').config();
-
 const lnURL = "https://www.google.com/";
 const gitURL = "https://github.com/utkarsh-vats";
 const instaURL = "https://www.instagram.com/utkarsh_vats2000/";
