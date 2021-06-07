@@ -1,0 +1,41 @@
+.footer-container {
+    width: 100%;
+    padding: 3rem 5rem;
+    display: flex;
+    justify-content: center;
+    background: rgb(240, 240, 240);
+}
+
+.footer-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.website-rights h2 {
+    font-size: 2.5rem;
+}
+
+.link {
+    font-size: 2rem;
+    margin: 0 0.3rem;
+    color: black;
+}
+
+@media screen and (max-width: 600px) {
+    .footer-wrapper {
+        flex-direction: column;
+
+    }
+
+    .website-rights {
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+
+    .socials {
+        width: 100%;
+    }
+}

@@ -1,0 +1,127 @@
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.blogs {
+    width: 100%;
+    padding: 6rem 2rem;
+    margin: 6rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.blogs::before {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    content: attr(index);
+    font-size: 60rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+    z-index: -10;
+}
+
+.image {
+    width: 55%;
+    position: relative;
+}
+
+.image::before {
+    content: "";
+    width: 1px;
+    height: 8rem;
+    position: absolute;
+    background: black;
+    top: calc(100% - 4rem);
+    right: 2rem;
+}
+
+.image::after {
+    content: "by " attr(author);
+    position: absolute;
+    bottom: -6rem;
+    right: 1rem;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 10px 10px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.content-container {
+    width: 40%;
+    order: 1;
+}
+
+.heading {
+    font-size: 2rem;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.heading::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 20px;
+    bottom: 0;
+    right: 0;
+    z-index: -5;
+}
+
+.author {
+    color: #aaa;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.content {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.content-container a {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 100;
+    color: black;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    .blogs {
+        flex-direction: column;
+    }
+
+    .blogs::before {
+        top: -32%;
+    }
+
+    .image {
+        max-width: 700px;
+        width: 100%;
+        margin-bottom: 5rem;
+        order: 0 !important;
+    }
+
+    .content-container {
+        max-width: 700px;
+        width: 100%;
+        margin-top: 5rem;
+    }
+}
